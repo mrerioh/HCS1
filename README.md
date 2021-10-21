@@ -6,37 +6,37 @@ The VM holds a stack of size 256, that is managed using a stack pointer, defined
 #Instruction Set
 The HCS1, as I like to call it, supports 11 instructions:
 
-  #HLT:
+  ## HLT:
       Ends the program.
   
-  #PSH:
+  ## PSH:
       Pushes a number onto the stack.
       
-  #POP:
+  ## POP:
       Pops a number from the stack (does not return it though).
       
-  #ADD:
+  ## ADD:
       Adds the last two stack elements, stores the sum in register B, and pushes the sum to the stack.
   
-  #STR:
+  ## STR:
       Stores a register with a value; first input is the register, second input is the value.
   
-  #ADDR:
+  ## ADDR:
       Adds the values at two registers together, and stores that sum in the first register specified.
   
-  #ITOB:
+  ## ITOB:
       Converts an integer to binary.
   
-  #MOV:
+  ## MOV:
       Moves the value of one register to the other specified register (e.g MOV A B moves the value of A to B). 
   
-  #EXG:
+  ## EXG:
       Exchanges the values between two registers.
   
-  #BAND:
+  ## BAND:
       Bitwise AND operation of two registers; This is similar to to the BCLR command in the HCS12 microcontroller.
   
-  #BOR:
+  ## BOR:
       Bitwise OR operation of two registers; This is similar to to the BSET command in the HCS12 microcontroller.
       
   These instructions are not called in the .hcs file by their syntax names, but their number in the enum defined in main.c For example, HLT is not actually called to stop the program, but 0 is called.
