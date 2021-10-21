@@ -3,7 +3,7 @@ A simple VM created in C, modelled after the HCS12 microcontroller assembly code
 
 The VM holds a stack of size 256, that is managed using a stack pointer, defined within the registers space of the program. There are a total of 6 memory registers, labelled A-F, as well as a program counter register, counting which instruction the VM is at.
 
-#Instruction Set
+### Instruction Set
 The HCS1, as I like to call it, supports 11 instructions:
 
   ## HLT:
